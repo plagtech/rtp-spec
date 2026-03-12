@@ -1,0 +1,53 @@
+{
+  "name": "@spraay/rtp-sdk",
+  "version": "0.1.0",
+  "description": "Robot Task Protocol SDK — connect any robot to the x402 payment network",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "keywords": [
+    "rtp",
+    "robot-task-protocol",
+    "x402",
+    "robots",
+    "ai-agents",
+    "spraay",
+    "usdc",
+    "depin",
+    "micropayments",
+    "robotics",
+    "iot"
+  ],
+  "author": "Spraay Protocol <hello@spraay.app>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/plagtech/rtp-sdk"
+  },
+  "homepage": "https://github.com/plagtech/rtp-spec",
+  "bugs": {
+    "url": "https://github.com/plagtech/rtp-spec/issues"
+  },
+  "dependencies": {
+    "axios": "^1.7.0",
+    "express": "^4.21.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
