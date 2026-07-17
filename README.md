@@ -78,6 +78,15 @@ The full spec defines:
 - **Payment Standard** — x402 with atomic escrow (pay-per-task in USDC)
 - **Discovery** — auto-registration in `.well-known/x402.json`
 
+## Extensions
+
+RTP is extended without breaking compatibility (see [RTP 1.0 §14](spec/RTP-1.0.md#14-extensibility)). Draft extensions:
+
+| Extension | Status | Description |
+|---|---|---|
+| **[RTP-EXT-1 — Batch Task Dispatch](spec/extensions/RTP-EXT-1-BATCH.md)** | Draft | Commission N tasks across N robots with **one x402 payment** and **one atomic on-chain settlement** via the Spraay batch contract. `independent` and `all_or_nothing` atomicity modes. |
+| **[RTP-EXT-2 — Simulation Mode](spec/extensions/RTP-EXT-2-SIM.md)** | Draft | Virtual `sim` robots that traverse the full RTP lifecycle — 402, payment, escrow, settlement — with no hardware. Scriptable behavior directives for deterministic success/fail/timeout testing. Composes with EXT-1. |
+
 ## SDK
 
 ```bash
@@ -167,7 +176,8 @@ Base URL: `https://gateway.spraay.app/robots`
 - [ ] Docker image (`spraay/rtp-device`)
 - [ ] Hardware dongle (USB plug-and-play for non-technical operators)
 - [ ] AgentRank integration (robot reputation scores)
-- [ ] Task bundles (multi-robot atomic task sequences)
+- [x] Task bundles (multi-robot atomic task sequences) — [RTP-EXT-1 (Batch)](spec/extensions/RTP-EXT-1-BATCH.md) draft
+- [x] Simulation mode — [RTP-EXT-2 (Sim)](spec/extensions/RTP-EXT-2-SIM.md) draft
 - [ ] Robot-to-robot delegation
 
 ## Use Cases
