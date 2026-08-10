@@ -408,7 +408,9 @@ export class InvoiceCodec implements ContentCodec<Invoice> {
 
 ```typescript
 import { Agent } from '@xmtp/agent-sdk';
-import { PaymentRequestCodec, PaymentReceiptCodec } from '@spraay/xmtp-content-types';
+// PaymentRequestCodec and PaymentReceiptCodec are the reference codecs from
+// "TypeScript Reference Implementation" above. No npm package is published yet —
+// copy the codec classes into your project until one is.
 
 // Initialize agent with Spraay codecs
 const agent = await Agent.create(signer, {

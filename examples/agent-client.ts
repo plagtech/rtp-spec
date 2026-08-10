@@ -8,7 +8,7 @@
  * are all handled automatically by the SDK.
  */
 
-import { RTPClient } from '@spraay/rtp-sdk'
+import { RTPClient } from '@spraayprotocol/rtp-sdk'
 
 // --------------------------------------------------
 // 1. Initialize the agent client

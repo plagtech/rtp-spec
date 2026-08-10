@@ -90,14 +90,14 @@ RTP is extended without breaking compatibility (see [RTP 1.0 §14](spec/RTP-1.0.
 ## SDK
 
 ```bash
-npm install @spraay/rtp-sdk
+npm install @spraayprotocol/rtp-sdk
 ```
 
 📦 **[SDK Repository](https://github.com/plagtech/rtp-sdk)** — TypeScript SDK for both device operators and AI agents.
 
 **Device side** (robot operator):
 ```javascript
-import { RTPDevice } from '@spraay/rtp-sdk'
+import { RTPDevice } from '@spraayprotocol/rtp-sdk'
 
 const robot = new RTPDevice({
   name: 'WarehouseBot-01',
@@ -119,7 +119,7 @@ robot.listen(3100)
 
 **Agent side** (AI agent hiring robots):
 ```javascript
-import { RTPClient } from '@spraay/rtp-sdk'
+import { RTPClient } from '@spraayprotocol/rtp-sdk'
 
 const client = new RTPClient({ wallet: myX402Wallet })
 const robots = await client.discover({ capability: 'pick', maxPrice: '0.10' })

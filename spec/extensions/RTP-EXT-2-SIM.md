@@ -181,7 +181,7 @@ Sim results extend the RTP 1.0 Result Envelope with one required field:
 The SDK ships an in-process sim device so operator-side handlers can be developed with no gateway round-trip at all:
 
 ```ts
-import { RTPDevice, simTransport } from '@spraay/rtp-sdk'
+import { RTPDevice, simTransport } from '@spraayprotocol/rtp-sdk'
 
 const robot = new RTPDevice({
   name: 'DevBot',
@@ -196,7 +196,7 @@ robot.onTask('pick', async (params, task) => {
 })
 
 // Drive it from a local client in the same process
-import { RTPClient, simWallet } from '@spraay/rtp-sdk'
+import { RTPClient, simWallet } from '@spraayprotocol/rtp-sdk'
 const client = new RTPClient({ wallet: simWallet(), transport: robot.transport })
 const result = await client.hire(robot.profile, { task: 'pick', parameters: { item: 'X' } })
 // result.simulated === true, full lifecycle traversed in-memory

@@ -44,7 +44,7 @@ curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
 # Install RTP SDK
-npm install -g @spraay/rtp-sdk
+npm install -g @spraayprotocol/rtp-sdk
 
 # Run guided setup wizard
 rtp-device init
@@ -80,7 +80,7 @@ Flash Raspberry Pi OS onto SD card, then add a setup script to the boot partitio
 # firstboot.sh — place on /boot partition
 curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 sudo apt-get install -y nodejs
-npm install -g @spraay/rtp-sdk
+npm install -g @spraayprotocol/rtp-sdk
 rtp-device init --config /boot/rtp.config.json
 rtp-device start
 ```
@@ -92,7 +92,7 @@ Drop your `rtp.config.json` on the boot partition. Insert SD card, power on — 
 Connect via SSH over USB OTG or WiFi, then install normally:
 
 ```bash
-npm install -g @spraay/rtp-sdk
+npm install -g @spraayprotocol/rtp-sdk
 rtp-device init
 rtp-device start
 ```
@@ -112,7 +112,7 @@ docker run -d \
 ### GPIO Example — Controlling a Physical Relay
 
 ```javascript
-import { RTPDevice } from '@spraay/rtp-sdk'
+import { RTPDevice } from '@spraayprotocol/rtp-sdk'
 import { Gpio } from 'onoff'
 
 const relay = new Gpio(17, 'out')
@@ -163,7 +163,7 @@ A Raspberry Pi (or any Linux device) acts as the **RTP bridge**. It runs the SDK
 ### Bridge Setup (on the Pi)
 
 ```javascript
-import { RTPDevice } from '@spraay/rtp-sdk'
+import { RTPDevice } from '@spraayprotocol/rtp-sdk'
 import { SerialPort } from 'serialport'
 
 const port = new SerialPort({ path: '/dev/ttyUSB0', baudRate: 9600 })
@@ -243,7 +243,7 @@ void loop() {
 ### Example — ABB Robot (REST API)
 
 ```javascript
-import { RTPDevice } from '@spraay/rtp-sdk'
+import { RTPDevice } from '@spraayprotocol/rtp-sdk'
 import axios from 'axios'
 
 const device = new RTPDevice({
@@ -293,7 +293,7 @@ Same external server pattern as industrial robots. The SDK runs on a connected d
 **Can run SDK directly:** ✅ Yes — on the companion computer (Pi or Jetson).
 
 ```javascript
-import { RTPDevice } from '@spraay/rtp-sdk'
+import { RTPDevice } from '@spraayprotocol/rtp-sdk'
 import { connect } from 'node-mavlink'
 
 const drone = await connect('/dev/ttyAMA0')
@@ -398,7 +398,7 @@ device.onTask('charge', async (params, task) => {
 
 ```powershell
 # Install Node.js from https://nodejs.org, then:
-npm install -g @spraay/rtp-sdk
+npm install -g @spraayprotocol/rtp-sdk
 rtp-device init
 rtp-device start
 ```
@@ -420,7 +420,7 @@ docker run -d `
 
 | Method | Best For | Command |
 |---|---|---|
-| **npm global** | Any machine with Node.js | `npm install -g @spraay/rtp-sdk` |
+| **npm global** | Any machine with Node.js | `npm install -g @spraayprotocol/rtp-sdk` |
 | **Docker** | Any machine with Docker | `docker run spraay/rtp-device` |
 | **Python pip** | Pi / microcontroller-adjacent | `pip install spraay-rtp` *(coming soon)* |
 | **SD Card** | Raspberry Pi (headless deploy) | Pre-flash config on boot partition |
@@ -434,7 +434,7 @@ The fastest path for any supported device:
 
 ```bash
 # Install
-npm install -g @spraay/rtp-sdk
+npm install -g @spraayprotocol/rtp-sdk
 
 # Interactive setup — answers a few questions, generates config
 rtp-device init

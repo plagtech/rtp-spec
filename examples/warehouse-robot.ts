@@ -8,7 +8,7 @@
  * sets pricing, and listens for incoming paid tasks from AI agents.
  */
 
-import { RTPDevice } from '@spraay/rtp-sdk'
+import { RTPDevice } from '@spraayprotocol/rtp-sdk'
 
 // --------------------------------------------------
 // 1. Configure the device

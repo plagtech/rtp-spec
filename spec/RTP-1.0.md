@@ -702,7 +702,7 @@ Full RTP 1.0 reference implementation including:
 - Auto-discovery via `.well-known/x402.json`
 - Audit logging for all task lifecycle events
 
-**SDK:** [`@spraay/rtp-sdk`](https://github.com/plagtech/rtp-sdk)
+**SDK:** [`@spraayprotocol/rtp-sdk`](https://github.com/plagtech/rtp-sdk)
 - TypeScript SDK for device operators and AI agent clients
 - CLI setup wizard (`rtp-device init`)
 - Docker deployment support

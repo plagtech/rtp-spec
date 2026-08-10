@@ -247,7 +247,7 @@ The 402 challenge for a batch quotes the batch **dispatch fee** so the agent sig
 ## 8. SDK Surface
 
 ```ts
-import { RTPClient } from '@spraay/rtp-sdk'
+import { RTPClient } from '@spraayprotocol/rtp-sdk'
 
 const client = new RTPClient({ wallet: myX402Wallet })
 
